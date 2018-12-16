@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\dotnet-code-challenge\dotnet-code-challenge.csproj" />
+    <ProjectReference Include="..\dotnet-code-challenge\Racing.csproj" />
   </ItemGroup>
 
 </Project>

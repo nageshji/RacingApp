@@ -1,5 +1,5 @@
 ﻿using System;
-using dotnet_code_challenge.Models;
+using RacingApp.Models;
 using dotnet_code_challenge.Repository;
 using dotnet_code_challenge.Services;
 
@@ -15,15 +15,16 @@ namespace dotnet_code_challenge
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            
             IMeetingRepository meetingRepository = new MeetingRepository(new MeetingContext());
-            var horses = meetingRepository.GetHorses(92217, 1536514);
-            Console.WriteLine("HorseNames");
+            var horses = meetingRepository.GetHorses();
+            Console.WriteLine("List of Horses order by Prices are");
+            Console.WriteLine("==================================");
             foreach (var horse in horses)
             {
-                Console.WriteLine(horse.Name);
+                Console.WriteLine(horse.name + "-" + horse.Price);
             }
+            Console.Write("Press any key to exit:");
+            Console.Read();
         }
     }
 }

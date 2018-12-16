@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
-using dotnet_code_challenge.Models;
+using RacingApp.Models;
 
 namespace dotnet_code_challenge.Repository
 {
     internal interface IMeetingContext
     {
-        IEnumerable<Meeting> Meetings { get; }
+        Meeting Meeting { get; }
     }
 
 
